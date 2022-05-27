@@ -86,7 +86,7 @@ public class Fairy extends Actor
         //shoot a bullet/use powers
         if(Greenfoot.isKeyDown("space"))
         {
-            getWorld().addObject(new Bullet(), getX(), getY()-85);
+            getWorld().addObject(new Bullet(), getX(), getY()-90);
         }
     }
 }    

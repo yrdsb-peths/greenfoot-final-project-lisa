@@ -12,7 +12,7 @@ public class Bullet extends Actor
     
     public Bullet()
     {
-        bullet0.scale(70,70);
+        bullet0.scale(50,50);
         setImage(bullet0);    
     }
     
@@ -25,6 +25,7 @@ public class Bullet extends Actor
         {
             removeTouching(Enemy.class);
             MyWorld world = (MyWorld) getWorld();
+            world.increaseScore();
         }
     }
   

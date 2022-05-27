@@ -53,6 +53,7 @@ public class Enemy extends Actor
         {
             removeTouching(Fairy.class);
             MyWorld world = (MyWorld) getWorld();
+            world.gameOver();
         }
     }
     
@@ -73,9 +74,10 @@ public class Enemy extends Actor
         kill();
         
         //remove enemy once it gets to the edge of the world
-        if(getY() >= 700)
+        MyWorld world = (MyWorld) getWorld();
+        if(getY() == world.getHeight())
         {
-            getWorld().removeObject(this);
+            world.removeObject(this);
         }
     }
 }

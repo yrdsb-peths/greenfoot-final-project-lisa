@@ -1,7 +1,19 @@
 #BlueJ class context
 comment0.target=MyWorld
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ MyWorld,\ the\ world\ the\ fairy\ lives\ in.\r\n\ \r\n\ @author\ Lisa\ Zhao\ \r\n\ @version\ May\ 26,\ 2022\r\n
 comment1.params=
 comment1.target=MyWorld()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\r\n\ \r\n
-numComments=2
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\r\n
+comment2.params=
+comment2.target=void\ increaseScore()
+comment2.text=\r\n\ Increase\ score\r\n\ Score\ is\ increase\ by\ 10\ points\ every\ time\ an\ enemy\ is\ killed\r\n
+comment3.params=
+comment3.target=void\ gameOver()
+comment3.text=\r\n\ End\ the\ game\ and\ show\ "Game\ Over"\r\n
+comment4.params=
+comment4.target=void\ enemyRow1()
+comment4.text=\r\n\ Add\ enemies\ by\ row\r\n
+comment5.params=
+comment5.target=void\ enemyRow2()
+comment5.text=\r\n\ Add\ enemies\ by\ row\ pt2\r\n
+numComments=6
