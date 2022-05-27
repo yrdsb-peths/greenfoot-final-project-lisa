@@ -19,13 +19,13 @@ public class Fairy extends Actor
         for (int i = 0; i < idleRight.length; i++)
         {
             idleRight[i] = new GreenfootImage("images/fairy1_idle/1idle"+ i + ".png");
-            idleRight[i].scale(100,100);
+            idleRight[i].scale(150,150);
         }
         for (int i = 0; i < idleLeft.length; i++)
         {
             idleLeft[i] = new GreenfootImage("images/fairy1_idle/1idle"+ i + ".png");
             idleLeft[i].mirrorHorizontally();
-            idleLeft[i].scale(100,100);
+            idleLeft[i].scale(150,150);
         }
         
         animationTimer.mark();
@@ -66,16 +66,24 @@ public class Fairy extends Actor
     public void act() 
     {
         // move the fairy
-        if (Greenfoot.isKeyDown("left")){
+        if (Greenfoot.isKeyDown("left"))
+        {
             move (-2);
             facing = "left";
         }
-        if (Greenfoot.isKeyDown("right")){
+        if (Greenfoot.isKeyDown("right"))
+        {
             move (2);
             facing = "right";
         }
         
         //animate the fairy
         animateFairy();
+        
+        //shoot a bullet/use powers
+        if(Greenfoot.isKeyDown("space"))
+        {
+            getWorld().addObject(new Bullet(), getX(), getY());
+        }
+        }
     }    
-}
