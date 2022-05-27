@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Enemy
+comment0.text=\r\n\ The\ enemy\ our\ fairy\ must\ fight.\r\n\ \r\n\ @author\ Lisa\ Zhao\ \r\n\ @version\ May\ 27,\ 2022\r\n
+comment1.params=
+comment1.target=Enemy()
+comment1.text=\r\n\ Constructor\ for\ the\ enemy\ class\r\n
+comment2.params=
+comment2.target=void\ animateEnemy()
+comment2.text=\r\n\ Animate\ the\ enemy\r\n
+comment3.params=
+comment3.target=void\ kill()
+comment3.text=\r\n\ The\ enemy\ will\ kill\ the\ fairy\r\n
+comment4.params=
+comment4.target=void\ act()
+comment4.text=\r\n\ Act\ -\ do\ whatever\ the\ Enemy\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+numComments=5

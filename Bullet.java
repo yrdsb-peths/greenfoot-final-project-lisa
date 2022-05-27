@@ -17,12 +17,33 @@ public class Bullet extends Actor
     }
     
     /**
+     * Make the bullet "kill" the enemy
+     */
+    public void kill()
+    {
+        if (isTouching(Enemy.class))
+        {
+            removeTouching(Enemy.class);
+            MyWorld world = (MyWorld) getWorld();
+        }
+    }
+  
+    /**
      * Act - do whatever the Bullet wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+     */ 
     public void act()
     {
         // Add your action code here.
         setLocation(getX(), getY()-5);
+        
+        //kill the enemy
+        kill();
+        
+        //remove bullets once they touch the edge of the world
+        if(getY() <= 0)
+        {
+            getWorld().removeObject(this);
+        }
     }
 }

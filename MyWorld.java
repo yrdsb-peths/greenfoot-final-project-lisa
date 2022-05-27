@@ -15,9 +15,12 @@ public class MyWorld extends World
      */
     public MyWorld()
     {    
-        // Create a new world with 400x600 cells with a cell size of 1x1 pixels.
+        // Create a new world with 400x700 cells with a cell size of 1x1 pixels.
         super(400, 700, 1); 
         Fairy f1 = new Fairy();
-        addObject(f1, 200, 610);
+        addObject(f1, 200, 600);
+        
+        Enemy e1 = new Enemy();
+        addObject(e1, 200, 250);
     }
 }

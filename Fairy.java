@@ -14,6 +14,9 @@ public class Fairy extends Actor
     //Direction the fairy is facing
     String facing = "right";
     SimpleTimer animationTimer = new SimpleTimer();
+    /**
+     * Constructor for the fairy class
+     */
     public Fairy()
     {
         for (int i = 0; i < idleRight.length; i++)
@@ -83,7 +86,7 @@ public class Fairy extends Actor
         //shoot a bullet/use powers
         if(Greenfoot.isKeyDown("space"))
         {
-            getWorld().addObject(new Bullet(), getX(), getY());
+            getWorld().addObject(new Bullet(), getX(), getY()-85);
         }
-        }
-    }    
+    }
+}    

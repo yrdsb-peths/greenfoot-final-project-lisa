@@ -3,6 +3,7 @@ comment0.target=Fairy
 comment0.text=\r\n\ The\ Fairy,\ the\ hero\ of\ the\ game,\ controlled\ by\ the\ player.\r\n\ \r\n\ @author\ Lisa\ Zhao\ \r\n\ @version\ May\ 26,\ 2022\r\n
 comment1.params=
 comment1.target=Fairy()
+comment1.text=\r\n\ Constructor\ for\ the\ fairy\ class\r\n
 comment2.params=
 comment2.target=void\ animateFairy()
 comment2.text=\r\n\ Animate\ the\ fairy\r\n
