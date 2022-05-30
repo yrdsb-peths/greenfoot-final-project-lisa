@@ -1,3 +1,4 @@
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
@@ -27,8 +28,7 @@ public class MyWorld extends World
         addObject(scoreLabel, 50, 50);
         
         // Add a enemies to the world
-        enemyRow1();
-        enemyRow2();
+        enemyRows();
     }
     
     /**
@@ -49,11 +49,11 @@ public class MyWorld extends World
         Label gameOverLabel = new Label("Game Over", 75);
         addObject(gameOverLabel, 200, 350);
     }
-    
+   
     /**
      * Add enemies by row
      */
-    public void enemyRow1()
+    public void enemyRows()
     {
         Enemy e1 = new Enemy();
         addObject(e1, 50, 250);
@@ -63,18 +63,13 @@ public class MyWorld extends World
         addObject(e3, 250, 250);
         Enemy e4 = new Enemy();
         addObject(e4, 350, 250);
-    }
-    
-    /**
-     * Add enemies by row pt2
-     */
-    public void enemyRow2()
-    {
-        Enemy e1 = new Enemy();
-        addObject(e1, 100, 150);
-        Enemy e2 = new Enemy();
-        addObject(e2, 200, 150);
-        Enemy e3 = new Enemy();
-        addObject(e3, 300, 150);
+        Enemy e5 = new Enemy();
+        addObject(e5, 50, 150);
+        Enemy e6 = new Enemy();
+        addObject(e6, 150, 150);
+        Enemy e7 = new Enemy();
+        addObject(e7, 250, 150);
+        Enemy e8 = new Enemy();
+        addObject(e8, 350, 150);
     }
 }

@@ -25,7 +25,12 @@ public class Bullet extends Actor
         {
             removeTouching(Enemy.class);
             MyWorld world = (MyWorld) getWorld();
+            
+            //increase score once an enemy is killed
             world.increaseScore();
+            
+            //remove the bullet once it has been used
+            world.removeObject(this);
         }
     }
   
@@ -38,13 +43,15 @@ public class Bullet extends Actor
         // Add your action code here.
         setLocation(getX(), getY()-5);
         
-        //kill the enemy
-        kill();
-        
         //remove bullets once they touch the edge of the world
         if(getY() <= 0)
         {
             getWorld().removeObject(this);
+        }
+        else
+        {
+            //kill the enemies if the bullet is still in the world
+            kill();
         }
     }
 }

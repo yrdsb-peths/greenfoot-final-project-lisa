@@ -73,10 +73,12 @@ public class Enemy extends Actor
         //kill fairy
         kill();
         
+        //add and respawn enemies
+        
         //remove enemy once it gets to the edge of the world
-        MyWorld world = (MyWorld) getWorld();
-        if(getY() == world.getHeight())
+        if(getY() >= 690)
         {
+            MyWorld world = (MyWorld) getWorld();
             world.removeObject(this);
         }
     }

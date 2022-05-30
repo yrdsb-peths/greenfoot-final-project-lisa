@@ -84,7 +84,7 @@ public class Fairy extends Actor
         animateFairy();
         
         //shoot a bullet/use powers
-        if(Greenfoot.isKeyDown("space"))
+        if("space".equals(Greenfoot.getKey()))
         {
             getWorld().addObject(new Bullet(), getX(), getY()-90);
         }
