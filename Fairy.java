@@ -33,7 +33,7 @@ public class Fairy extends Actor
         
         animationTimer.mark();
         
-        //inital fairy image
+        //set inital fairy image
         setImage(idleRight[0]);
     }
     
@@ -43,6 +43,7 @@ public class Fairy extends Actor
      */
     public void animateFairy()
     {
+        //slow down animation speed
         if (animationTimer.millisElapsed() < 200)
         {
             return;
@@ -83,7 +84,8 @@ public class Fairy extends Actor
         //animate the fairy
         animateFairy();
         
-        //shoot a bullet/use powers
+        //shoot a bullet/use powers if the space key is down
+        //do not allow continuous shooting by holding down the space key
         if("space".equals(Greenfoot.getKey()))
         {
             getWorld().addObject(new Bullet(), getX(), getY()-90);

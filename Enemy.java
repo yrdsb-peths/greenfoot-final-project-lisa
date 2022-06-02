@@ -49,10 +49,10 @@ public class Enemy extends Actor
      */
     public void kill()
     {
-        if (isTouching(Fairy.class))
+        MyWorld world = (MyWorld) getWorld();
+        if (isTouching(Fairy.class) && world.score > 200)
         {
             removeTouching(Fairy.class);
-            MyWorld world = (MyWorld) getWorld();
             world.gameOver();
         }
     }
