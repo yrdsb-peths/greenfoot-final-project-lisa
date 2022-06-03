@@ -11,6 +11,7 @@ public class MyWorld extends World
     public int score = 0;
     public Enemy tracker;
     Label scoreLabel;
+    Label gameOverLabel = new Label("Game Over", 75);
     /**
      * Constructor for objects of class MyWorld.
      */
@@ -61,7 +62,6 @@ public class MyWorld extends World
      */
     public void gameOver()
     {
-        Label gameOverLabel = new Label("Game Over", 75);
         addObject(gameOverLabel, 200, 350);
     }
     
@@ -69,6 +69,7 @@ public class MyWorld extends World
     {
         Label winGameLabel = new Label("YOU WIN!", 72);
         addObject(winGameLabel, 200, 350);
+        removeObject(gameOverLabel);
     }
    
     /**
@@ -76,9 +77,12 @@ public class MyWorld extends World
      */
     public void enemyRows()
     {
+        //create a tracker Enemy to respawn in rows
         Enemy et = new Enemy();
-        addObject(et, -50, 0);
+        addObject(et, -500, 0);
         tracker = et;
+        
+        //create a row of enemies
         Enemy e1 = new Enemy();
         addObject(e1, 50, 0);
         Enemy e2 = new Enemy();
@@ -87,6 +91,5 @@ public class MyWorld extends World
         addObject(e3, 250, 0);
         Enemy e4 = new Enemy();
         addObject(e4, 350, 0);
-    }
-    
+    }  
 }
