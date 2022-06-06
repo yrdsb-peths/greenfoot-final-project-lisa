@@ -8,10 +8,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bullet extends Actor
 {
+    //add bullet image
     GreenfootImage bullet0 = new GreenfootImage("images/bullets/bullet0.png");
     
+    /**
+     * Constructor for bullet class
+     */
     public Bullet()
     {
+        //set image and image size
         bullet0.scale(50,50);
         setImage(bullet0);    
     }

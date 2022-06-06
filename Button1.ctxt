@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Button1
+comment0.text=\r\n\ A\ button\ to\ press\ and\ switch\ from\ Title\ Screen\ to\ Instructions\ Screen.\r\n\ \r\n\ @author\ Lisa\ Zhao\r\n\ @version\ June\ 3,\ 2022\r\n
+comment1.params=
+comment1.target=Button1()
+comment1.text=\r\n\ Constructor\ for\ the\ Button1\ class\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Button\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+numComments=3

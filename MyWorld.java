@@ -69,6 +69,8 @@ public class MyWorld extends World
     {
         Label winGameLabel = new Label("YOU WIN!", 72);
         addObject(winGameLabel, 200, 350);
+        
+        //if Fairy dies but gets enough points, "game over" disappears
         removeObject(gameOverLabel);
     }
    
