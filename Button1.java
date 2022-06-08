@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Button1 extends Actor
 {
-    //add image from files
+    //Add image from files
     GreenfootImage button1 = new GreenfootImage("images/instrucButton.png");
     
     /**
@@ -16,6 +16,7 @@ public class Button1 extends Actor
      */
     public Button1()
     {
+        //Set image and image size
         button1.scale(200,60);
         setImage(button1);
     }
@@ -26,7 +27,7 @@ public class Button1 extends Actor
      */
     public void act() 
     {       
-        // switch screens when clicked
+        // Switch screens when clicked
         if (Greenfoot.mousePressed(this))
         {
             Greenfoot.setWorld (new Instructions());

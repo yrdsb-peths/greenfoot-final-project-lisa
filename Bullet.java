@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bullet extends Actor
 {
-    //add bullet image
+    //Add bullet image from files
     GreenfootImage bullet0 = new GreenfootImage("images/bullets/bullet0.png");
     
     /**
@@ -16,7 +16,7 @@ public class Bullet extends Actor
      */
     public Bullet()
     {
-        //set image and image size
+        //Set image and image size
         bullet0.scale(50,50);
         setImage(bullet0);    
     }
@@ -28,13 +28,14 @@ public class Bullet extends Actor
     {
         if (isTouching(Enemy.class))
         {
+            //Remove the Enemy once it is hit by Bullet
             removeTouching(Enemy.class);
             MyWorld world = (MyWorld) getWorld();
             
-            //increase score once an enemy is killed
+            //Increase score once an enemy is killed
             world.increaseScore();
             
-            //remove the bullet once it has been used
+            //Remove bullet once used (each bullet can only be used once)
             world.removeObject(this);
         }
     }
@@ -48,14 +49,14 @@ public class Bullet extends Actor
         // Add your action code here.
         setLocation(getX(), getY()-5);
         
-        //remove bullets once they touch the edge of the world
+        //Remove bullets once they touch the edge of the world
         if(getY() <= 0)
         {
             getWorld().removeObject(this);
         }
         else
         {
-            //kill the enemies if the bullet is still in the world
+            //"Kill" the enemies if the bullet is still in the world
             kill();
         }
     }

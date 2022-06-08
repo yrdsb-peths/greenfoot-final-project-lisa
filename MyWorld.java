@@ -34,15 +34,19 @@ public class MyWorld extends World
     
     public void act()
     {
+        //Continuously add Enemy by row until the player "dies" or wins
         if (score < 200)
         {
+           //Add ne Enemy row once rows are 100 cells apart
             if (tracker.getY() >= 100)
            {
+               //Add Enemy by row
                enemyRows();
            }
         }
         else
         {
+            //Make the player win the game
             winGame();
         }
     }
@@ -65,12 +69,18 @@ public class MyWorld extends World
         addObject(gameOverLabel, 200, 350);
     }
     
+    /**
+     * End game and show "YOU WIN!"
+     */
     public void winGame()
     {
         Label winGameLabel = new Label("YOU WIN!", 72);
         addObject(winGameLabel, 200, 350);
         
-        //if Fairy dies but gets enough points, "game over" disappears
+        Label winStoryLabel = new Label("You've saved Fairytopia!", 40);
+        addObject(winStoryLabel, 200, 400);
+        
+        //If Fairy dies but gets enough points, "game over" disappears
         removeObject(gameOverLabel);
     }
    
@@ -79,12 +89,12 @@ public class MyWorld extends World
      */
     public void enemyRows()
     {
-        //create a tracker Enemy to respawn in rows
+        //Create a tracker Enemy to track spacing between rows
         Enemy et = new Enemy();
         addObject(et, -500, 0);
         tracker = et;
         
-        //create a row of enemies
+        //Create a row of enemies
         Enemy e1 = new Enemy();
         addObject(e1, 50, 0);
         Enemy e2 = new Enemy();

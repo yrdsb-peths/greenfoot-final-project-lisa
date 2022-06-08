@@ -8,22 +8,27 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemy extends Actor
 {
+    //Add images from files as an array to animate
     GreenfootImage[] idleEnemy = new GreenfootImage[10];
+    
+    //Add an animation timer to slow down animation
     SimpleTimer animationTimer = new SimpleTimer();
     /**
      * Constructor for the enemy class
      */
     public Enemy()
     {
+        //No need for image mirroring as Enemy only moves down
         for (int i = 0; i < idleEnemy.length; i++)
         {
             idleEnemy[i] = new GreenfootImage("images/enemy1_idle/idle"+ i + ".png");
             idleEnemy[i].scale(80,80);
         }
         
+        //Add/implement animation timer
         animationTimer.mark();
         
-        //set initial enemy image
+        //Set initial enemy image
         setImage(idleEnemy[0]);
     }
     
@@ -45,13 +50,14 @@ public class Enemy extends Actor
     }
     
     /**
-     * The enemy will kill the fairy
+     * The enemy will "kill" the fairy
      */
     public void kill()
     {
         MyWorld world = (MyWorld) getWorld();
         if (isTouching(Fairy.class) && world.score < 200)
         {
+            //Remove the Fairy and end the game if the Fairy is "killed"
             removeTouching(Fairy.class);
             world.gameOver();
         }
@@ -61,21 +67,18 @@ public class Enemy extends Actor
      * Act - do whatever the Enemy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
     public void act() 
     {
-        //animate the enemy
+        //Animate the enemy
         animateEnemy();
         
-        //enemy moves downwards
+        //Enemy moves downwards continuously
         setLocation(getX(), getY()+1);
         
-        //kill fairy
+        //"Kill" fairy
         kill();
         
-        //add and respawn enemies
-        
-        //remove enemy once it gets to the edge of the world
+        //Remove Enemy once it gets to the edge of the world
         if(getY() >= 690)
         {
             MyWorld world = (MyWorld) getWorld();

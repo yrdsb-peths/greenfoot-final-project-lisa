@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TitleScreen extends World
 {
-    Label titleLabel = new Label ("Game Title TBD", 55);
     /**
      * Constructor for objects of class TitleScreen.
      * 
@@ -17,11 +16,16 @@ public class TitleScreen extends World
     {    
         // Create a new world with 400x700 cells with a cell size of 1x1 pixels.
         super(400, 700, 1, false); 
-        addObject(titleLabel, 200, 350);
         
+        //Add game title
+        GameTitle gameTitle = new GameTitle();
+        addObject(gameTitle, 200, 350);
+        
+        //Add button to switch screen to Instructions screen
         Button1 instructionsButton = new Button1();
         addObject(instructionsButton, 200, 450);
         
+        //Add button to switch screen to MyWorld (aka the game screen)
         Button2 startButton = new Button2();
         addObject(startButton, 200, 550);
         

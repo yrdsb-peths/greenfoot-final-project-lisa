@@ -8,11 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Fairy extends Actor
 {
+    //Add image from files - as an array to animate
     GreenfootImage[] idleRight = new GreenfootImage[7];
     GreenfootImage[] idleLeft = new GreenfootImage[7];
     
     //Direction the fairy is facing
     String facing = "right";
+    
+    //Add an animation timre to slow down the animation
     SimpleTimer animationTimer = new SimpleTimer();
     /**
      * Constructor for the fairy class
@@ -24,6 +27,7 @@ public class Fairy extends Actor
             idleRight[i] = new GreenfootImage("images/fairy1_idle/1idle"+ i + ".png");
             idleRight[i].scale(150,150);
         }
+        //Mirror the image when fairy is moving left
         for (int i = 0; i < idleLeft.length; i++)
         {
             idleLeft[i] = new GreenfootImage("images/fairy1_idle/1idle"+ i + ".png");
@@ -31,9 +35,10 @@ public class Fairy extends Actor
             idleLeft[i].scale(150,150);
         }
         
+        //Add timer to slow down animation
         animationTimer.mark();
         
-        //set inital fairy image
+        //Set inital fairy image
         setImage(idleRight[0]);
     }
     
@@ -43,7 +48,7 @@ public class Fairy extends Actor
      */
     public void animateFairy()
     {
-        //slow down animation speed
+        //Slow down animation speed
         if (animationTimer.millisElapsed() < 200)
         {
             return;
@@ -69,7 +74,7 @@ public class Fairy extends Actor
      */
     public void act() 
     {
-        // move the fairy
+        // Move the fairy
         if (Greenfoot.isKeyDown("left"))
         {
             move (-2);
@@ -81,11 +86,11 @@ public class Fairy extends Actor
             facing = "right";
         }
         
-        //animate the fairy
+        //Animate the fairy
         animateFairy();
         
-        //shoot a bullet/use powers if the space key is down
-        //do not allow continuous shooting by holding down the space key
+        //Shoot a bullet/use powers if the space key is down
+        //Do not allow continuous shooting by holding down the space key
         if("space".equals(Greenfoot.getKey()))
         {
             getWorld().addObject(new Bullet(), getX(), getY()-90);
