@@ -4,4 +4,6 @@ comment0.text=\r\n\ Title\ Screen\ for\ the\ game\r\n\ \r\n\ @author\ Lisa\ Zhao
 comment1.params=
 comment1.target=TitleScreen()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ TitleScreen.\r\n\ \r\n
-numComments=2
+comment2.params=
+comment2.target=void\ prepare()
+numComments=3

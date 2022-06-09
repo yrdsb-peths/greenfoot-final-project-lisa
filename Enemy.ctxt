@@ -13,4 +13,6 @@ comment3.text=\r\n\ The\ enemy\ will\ "kill"\ the\ fairy\r\n
 comment4.params=
 comment4.target=void\ act()
 comment4.text=\r\n\ Act\ -\ do\ whatever\ the\ Enemy\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-numComments=5
+comment5.params=spd
+comment5.target=void\ setSpeed(int)
+numComments=6

@@ -13,6 +13,9 @@ public class Enemy extends Actor
     
     //Add an animation timer to slow down animation
     SimpleTimer animationTimer = new SimpleTimer();
+    
+    //Add a speed int
+    int speed = 1;
     /**
      * Constructor for the enemy class
      */
@@ -72,8 +75,10 @@ public class Enemy extends Actor
         //Animate the enemy
         animateEnemy();
         
-        //Enemy moves downwards continuously
-        setLocation(getX(), getY()+1);
+        //Enemy moves downwards
+        int x = getX();
+        int y = getY() + speed;
+        setLocation(x, y);
         
         //"Kill" fairy
         kill();
@@ -84,5 +89,10 @@ public class Enemy extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.removeObject(this);
         }
+    }
+    
+    public void setSpeed(int spd)
+    {
+        speed = spd;
     }
 }
