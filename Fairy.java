@@ -8,6 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Fairy extends Actor
 {
+    //Add sound from files
+    GreenfootSound fairyDustSound = new GreenfootSound("fairyDust.mp3");
+    
     //Add image from files - as an array to animate
     GreenfootImage[] idleRight = new GreenfootImage[7];
     GreenfootImage[] idleLeft = new GreenfootImage[7];
@@ -94,6 +97,7 @@ public class Fairy extends Actor
         if("space".equals(Greenfoot.getKey()))
         {
             getWorld().addObject(new Bullet(), getX(), getY()-90);
+            fairyDustSound.play();
         }
     }
 }    

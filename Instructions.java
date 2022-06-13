@@ -13,7 +13,7 @@ public class Instructions extends World
      */
     public Instructions()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with 400x700 cells with a cell size of 1x1 pixels.
         super(400, 700, 1, false); 
         
         //Add instructions image to Instructions screen
