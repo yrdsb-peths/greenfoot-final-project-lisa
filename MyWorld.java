@@ -36,7 +36,7 @@ public class MyWorld extends World
     public void act()
     {
         //Continuously add Enemy by row until the player "dies" or wins
-        if (score <= 200)
+        if (score <= 500)
         {
            //Add ne Enemy row once rows are 100 cells apart
             if (tracker.getY() >= 100)
@@ -98,17 +98,11 @@ public class MyWorld extends World
      */
     public void winGame()
     {
-        Label winGameLabel = new Label("YOU WIN!", 72);
-        addObject(winGameLabel, 200, 350);
-        
-        Label winStoryLabel = new Label("You've saved Fairytopia!", 40);
-        addObject(winStoryLabel, 200, 400);
-        
-        Label homeScreenLabel = new Label("Press <backspace> to exit", 30);
-        addObject(homeScreenLabel, 200, 450);
-        
         //If Fairy dies but gets enough points, "game over" disappears
         removeObject(gameOverLabel);
+        
+        //Swtich to end game screen
+        Greenfoot.setWorld (new EndScreen());
     }
    
     /**

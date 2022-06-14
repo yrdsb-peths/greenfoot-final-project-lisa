@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TitleScreen extends World
 {
+    GreenfootSound backgroundMusic = new GreenfootSound("backgroundMusic.wav");
     /**
      * Constructor for objects of class TitleScreen.
      * 
@@ -32,6 +33,11 @@ public class TitleScreen extends World
         Button2 startButton = new Button2();
         addObject(startButton, 200, 550);
         
+    }
+    
+    public void act()
+    {
+        backgroundMusic.play();
     }
     
     //Prepare a Fairy on the Title Screen
