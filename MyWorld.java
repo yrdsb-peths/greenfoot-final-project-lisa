@@ -36,7 +36,7 @@ public class MyWorld extends World
     public void act()
     {
         //Continuously add Enemy by row until the player "dies" or wins
-        if (score <= 500)
+        if (score <= 200)
         {
            //Add ne Enemy row once rows are 100 cells apart
             if (tracker.getY() >= 100)

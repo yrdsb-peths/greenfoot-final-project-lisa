@@ -18,8 +18,8 @@ public class EndScreen extends World
         // Create a new world with 400x700 cells with a cell size of 1x1 pixels.
         super(400, 700, 1); 
         
-        //Show player's final score
-        scoreLabel = new Label(0, 80);
+        //Show player's final score (score is 200 because player wins game at 200 points)
+        scoreLabel = new Label(200, 80);
         addObject(scoreLabel, 200, 100);
         
         //Add game title
